@@ -1,0 +1,10 @@
+body {
+    background-image: url("assets/background.gif");
+    background-repeat: repeat;
+}
+
+
+.window {
+    margin: 32px;
+    width: 250px;
+}
