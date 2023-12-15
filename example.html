@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windrag.js example</title>
+</head>
+<body style="height: 100vh;margin:0;padding:0;">
+
+    <div class="box" style="width: 300px; height: 300px; background: red;"></div>
+
+    <script type="module">
+        import { windrag } from 'https://cdn.jsdelivr.net/npm/windrag';
+
+        const window = windrag.create('.box', '.box');
+
+        windrag.maximize(window.id);
+
+        setTimeout(() => {
+            windrag.maximize(window.id);
+        }, 5000)
+    </script>
+</body>
+</html>

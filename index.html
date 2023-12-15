@@ -3,16 +3,17 @@
 <!-- This website was heavily inspired by this website https://hytracer.ink-->
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="98.css" />
-    <title>HyprDawoox</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/css/98.css" />
+    <title>Dawoox</title>
+    <!--<script async src="lib/js/oneko.js"></script>-->
+    <script async src="scripts/window_mov.js" type="module"></script>
 </head>
 <body class="wrapper">
-    <script src="./oneko.js"></script>
     <div class="content">
         <div class="content_column">
-            <div class="window secondaryWindow">
-                <div class="title-bar">
+            <div class="window secondaryWindow" id="server-status">
+                <div class="title-bar" id="server-status-bar">
                     <div class="title-bar-text">Server status</div>
 
                     <div class="title-bar-controls">
@@ -27,8 +28,8 @@
                     <progress></progress>
                 </div>
             </div>
-            <div class="window secondaryWindow">
-                <div class="title-bar">
+            <div class="window secondaryWindow" id="stuff-I-do">
+                <div class="title-bar" id="stuff-I-do-bar">
                     <div class="title-bar-text">Stuff I do</div>
 
                     <div class="title-bar-controls">
@@ -40,8 +41,8 @@
                 <p><span class="neon">[ - ]</span> <a target="_blank" href="https://github.com/dawoox"> My Github</a></p>
             </div>
         </div>
-        <div class="window mainWindow">
-            <div class="title-bar">
+        <div class="window mainWindow" id="mainWindow">
+            <div class="title-bar" id="mainWindow-bar">
                 <div class="title-bar-text">Dawoox.exe</div>
 
                 <div class="title-bar-controls">
@@ -66,8 +67,8 @@
             </section>
         </div>
         <div class="content_column">
-            <div class="window secondaryWindow">
-                <div class="title-bar">
+            <div class="window secondaryWindow" id="about">
+                <div class="title-bar" id="about-bar">
                     <div class="title-bar-text">About</div>
 
                     <div class="title-bar-controls">
