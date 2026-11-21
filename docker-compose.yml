@@ -1,0 +1,45 @@
+services:
+  zola:
+    image: ghcr.io/getzola/zola:v0.23.6
+    working_dir: /input
+    volumes:
+      - ./blog:/input:ro
+      - blog-output:/site
+    command: build --output-dir /site/public/ --force
+    restart: no
+
+  api:
+    build: ./api
+    environment:
+      CF_API_TOKEN: ${CF_API_TOKEN}
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    depends_on:
+      zola:
+        condition: service_completed_successfully
+      api:
+        condition: service_started
+    volumes:
+      - ./site:/srv/site:ro
+      - blog-output:/srv/blog:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hypr.rule=Host(`dawoox.dev`) || Host(`www.dawoox.dev`)"
+      - "traefik.http.routers.hypr.entrypoints=websecure"
+      - "traefik.http.routers.hypr.tls=true"
+      - "traefik.http.routers.hypr.tls.certresolver=le"
+      - "traefik.http.services.hypr.loadbalancer.server.port=80"
+    networks:
+      - traefik
+    restart: unless-stopped
+
+volumes:
+  blog-output:
+
+networks:
+  traefik:
+    name: traefik-routing
+    external: true

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+<div class="window">
+    <div class="title-bar">
+        <div class="title-bar-text"><h1>{{ page.title }}</h1></div>
+    </div>
+    <div class="window-body">
+        {{ page.content | safe }}
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field">published: <time>{{ page.date }}</time></p>
+        <p class="status-bar-field help-field"><button aria-label="Help" disabled>?</button></p>
+    </div>
+</div>
+{% endblock %}

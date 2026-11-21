@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website was heavily inspired by this website https://hytracer.ink-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="lib/css/98.css"/>
+    <title>▪dawoox</title>
+    <script async src="lib/js/oneko.js"></script>
+    <script defer src="scripts/server-stats.js"></script>
+    <!--<script async src="scripts/window_mov.js" type="module"></script>-->
+</head>
+<body class="wrapper">
+<nav class="nav-bar">
+    <a href="/">/home</a>
+    <a href="/blog/">/blog</a>
+    <a href="https://git.dawoox.dev" target="_blank">/git-mirror</a>
+</nav>
+<div class="content">
+    <div class="content_column">
+        <div class="window secondary-window left_window" id="server-status">
+            <div class="title-bar" id="server-status-bar">
+                <div class="title-bar-text">Server status</div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p class="neon" id="server-status-badge">[ Offline ]</p>
+                <p id="server-stats-line">Server stats unavailable</p>
+                <progress></progress>
+                <p>build: %%BUILD_NUMBER%%</p> <!-- replaced when deploying by the git short sha number -->
+            </div>
+        </div>
+        <div class="window secondary-window left_window" id="where-to-find-me">
+            <div class="title-bar" id="where-to-find-me-bar">
+                <div class="title-bar-text">Where to find me</div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <p><span class="neon">[ - ]</span> Github: <a target="_blank" href="https://github.com/dawoox">@dawoox</a>
+            </p>
+            <p><span class="neon">[ - ]</span> LinkedIn: <a target="_blank"
+                                                            href="https://www.linkedin.com/in/bellanger-antoine/">
+                /in/bellanger-antoine</a></p>
+            <p><span class="neon">[ - ]</span> Discord: <code>@dawoox</code></p>
+            <p><span class="neon">[ - ]</span> Email: <a target="_blank" href="mailto:me@dawoox.dev">
+                me@dawoox.dev</a></p>
+        </div>
+        <div class="window secondary-window left_window" id="notepad">
+            <div class="title-bar">
+                <div class="title-bar-text">Notepad.exe</div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="notepad-content">
+                <textarea spellcheck="false" autocomplete="off" placeholder="write something nice" rows="8"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="window mainWindow" id="mainWindow">
+        <div class="title-bar" id="mainWindow-bar">
+            <div class="title-bar-text">Dawoox.exe</div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>I'm Dawoox, a software engineer (and part-time maker)</p>
+            <p>This website is my own little corner of the internet used as a technical demo of whatever interesting
+                thing came on my feed.</p>
+        </div>
+        <fieldset>
+            <legend>More about me</legend>
+            I'm a fourth year student at <a href="https://www.epitech.eu">Epitech BDX</a>
+            currently in Canada at <a href="https://www.viu.ca">VIU</a> for an exchange <br>
+            I'm a low level programming enthusiast from C, to kernel design, microcontroller and FPGA systems <br>
+            My work is mostly around back-end and data processing using Rust, Go, C/C++ and industrial systems <br>
+            <br>
+            Currently, I'm building <a href="https://github.com/OxideSlicer/slicer" target="_blank">OxideSlicer</a>
+            and maintaining my own corner of the internet.
+            <br>
+            I enjoy having strong opinion about Linux and packages managers (i use nixos btw). Trying to do my part
+            maintaining the <a href="https://github.com/NixOS/nixpkgs/" target="_blank">nixpkgs</a>.
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Cool stuff I did</legend>
+            <ul>
+                <li><a href="https://github.com/dawpitech/myftp" class="a_light_neon" target="_blank">myftp</a>: FTP
+                    server in C, compliant with RFC 959
+                </li>
+                <li><a href="https://github.com/dawpitech/nm-objdump" class="a_light_neon"
+                       target="_blank">nm-objdump</a>: UNIX <code>nm</code> and <code>objdump</code> implementation in C
+                </li>
+            </ul>
+            Most of my academic work is publicly available <a href="https://github.com/dawpitech"
+                                                              target="_blank">here</a>.<br>
+            The rest of my personal work is on my GitHub profile or available through my git mirror.
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>My work</legend>
+            I've worked at multiple companies doing very different things:
+            <ul>
+                <li>TypeScript for an online threat detection system for Discord</li>
+                <li>Go for backend API to integrate AI into online retail shops</li>
+                <li>C++, writing advanced Grafana queries and maintaining wireless infrastructure used for preventive
+                    maintenance of industrial equipments
+                </li>
+            </ul>
+            I'm always open to more opportunities and try new things! Searching for a part-time internship starting
+            around September 2027 either in remote, or around Bordeaux or Paris in France.
+        </fieldset>
+        <br>
+        <section class="buttons_right">
+            <button class="button">OK</button>
+        </section>
+    </div>
+    <div class="content_column">
+        <div class="window secondary-window right-window" id="friends">
+            <div class="title-bar">
+                <div class="title-bar-text">Friends</div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <a href="https://patate.dev"><img class="badges" src="assets/patate.jpeg" alt="patate.dev"></a>
+                <a href="https://drawbu.dev"><img class="badges" src="assets/drawbu.jpeg" alt="patate.dev"></a>
+            </div>
+        </div>
+        <div class="window secondary-window right-window" id="about">
+            <div class="title-bar" id="about-bar">
+                <div class="title-bar-text">About</div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="badges" src="assets/Internet_Explorer_icon.gif" alt="Internet explorer icon">
+                <img class="badges" src="assets/bestviewedcomputer.png" alt="Best viewed with a computer">
+                <img class="badges" src="assets/gnu_linux.jpeg" alt="Made on GNU/Linux">
+                <img class="badges" src="assets/saynotoweb3.gif" alt="Say no to Web 3">
+                <a href="http://www.anybrowser.org/campaign/"><img class="badges" src="assets/anybrowser.png" alt="Any browser you like"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

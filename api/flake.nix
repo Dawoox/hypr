@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     utils.url = "github:numtide/flake-utils";
   };
 
@@ -12,9 +12,11 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            neocities
+            go
+            gcc
           ];
-
         };
+
+        formatter = pkgs.nixpkgs-fmt;
       });
 }

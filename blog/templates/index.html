@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+    <div class="post-list">
+        {% for page in section.pages | reverse %}
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">{{ page.title }}</div>
+            </div>
+            <div class="window-body">
+                <p>{{ page.description }}</p>
+            </div>
+            <div>
+                <button onclick="window.location.href='{{ page.relative_path | replace(from="/index.md", to="/") }}'">Read more</button>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">{{ page.date }}</p>
+                <p class="status-bar-field">{{ page.reading_time }}mn to read</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
