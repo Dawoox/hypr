@@ -32,7 +32,7 @@
                 <p class="neon" id="server-status-badge">[ Offline ]</p>
                 <p id="server-stats-line">Server stats unavailable</p>
                 <progress></progress>
-                <p>build: %%BUILD_NUMBER%%</p> <!-- replaced when deploying by the git short sha number -->
+                <p>build: <!--#include virtual="/static/rev.txt" --></p>
             </div>
         </div>
         <div class="window secondary-window left_window" id="where-to-find-me">
