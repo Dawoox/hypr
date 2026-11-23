@@ -33,6 +33,7 @@ services:
       - "traefik.http.routers.hypr.tls.certresolver=le"
       - "traefik.http.services.hypr.loadbalancer.server.port=80"
     networks:
+      - default
       - traefik
     restart: unless-stopped
 
