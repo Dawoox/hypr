@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- This website was heavily inspired by this website https://hytracer.ink-->
+<!--# config errmsg="" -->
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css"/>
@@ -32,7 +32,9 @@
                 <p class="neon" id="server-status-badge">[ Offline ]</p>
                 <p id="server-stats-line">Server stats unavailable</p>
                 <progress></progress>
-                <p>build: <!--#include virtual="/static/rev.txt" --></p>
+                <p>build: <a target="_blank"
+                             href="https://github.com/dawoox/hypr/commit/<!--#include virtual='/static/rev.txt' -->">
+                    <!--#include virtual='/static/rev.txt' --></a></p>
             </div>
         </div>
         <div class="window secondary-window left_window" id="where-to-find-me">
@@ -160,7 +162,8 @@
                 <img class="badges" src="assets/bestviewedcomputer.png" alt="Best viewed with a computer">
                 <img class="badges" src="assets/gnu_linux.jpeg" alt="Made on GNU/Linux">
                 <img class="badges" src="assets/saynotoweb3.gif" alt="Say no to Web 3">
-                <a href="http://www.anybrowser.org/campaign/"><img class="badges" src="assets/anybrowser.png" alt="Any browser you like"></a>
+                <a href="http://www.anybrowser.org/campaign/"><img class="badges" src="assets/anybrowser.png"
+                                                                   alt="Any browser you like"></a>
             </div>
         </div>
     </div>
